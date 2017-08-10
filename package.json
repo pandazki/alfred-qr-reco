@@ -1,0 +1,42 @@
+{
+  "name": "alfred-qr-reco",
+  "version": "1.0.0",
+  "description": "QR Code Recognition",
+  "license": "MIT",
+  "repository": "onlrrr@gmail.com/alfred-qr-reco",
+  "author": {
+    "name": "Pandazki",
+    "email": "onlrrr@gmail.com",
+    "url": "github.com/pandazki/alfred-qr-reco"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "qr",
+    "code",
+    "qrcode",
+    "qr-code",
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.18.0",
+    "xo": "^0.17.0"
+  }
+}
