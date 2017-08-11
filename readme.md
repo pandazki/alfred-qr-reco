@@ -2,6 +2,8 @@
 
 > QR Code Recognition
 
+![screenshot](/qr_reco_screenshot.gif)
+
 ## Install
 
 ```

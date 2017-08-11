@@ -8,15 +8,54 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>61B6BE01-D6EB-4E9D-B240-A143FE4CDBA5</key>
+		<key>18A2BE5F-B269-482B-A102-E4267BCA57B8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E91C78B7-01C8-4453-AA0C-247528948412</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>62359D05-A6B0-4BC1-8751-416EABAD7909</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>4F65424C-03A0-4E65-AE07-B32F99BB6616</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>go to {query}</string>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6D870FF-799D-4E4F-83AE-7A36FDBA2343</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>60BDC103-44CA-4088-8B69-DBC034A3FCCA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E91C78B7-01C8-4453-AA0C-247528948412</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>62359D05-A6B0-4BC1-8751-416EABAD7909</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -33,9 +72,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Pandazki</string>
 	<key>description</key>
-	<string></string>
+	<string>QR Code Recognition</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -64,47 +103,65 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
 				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
+				<key>matchmode</key>
 				<integer>2</integer>
+				<key>matchstring</key>
+				<string>https?:\/\/.*</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>62359D05-A6B0-4BC1-8751-416EABAD7909</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
-				<key>keyword</key>
-				<string>qrreco</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
 				<key>script</key>
 				<string>./node_modules/.bin/run-node index.js</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>index.js</string>
-				<key>subtext</key>
 				<string></string>
-				<key>title</key>
-				<string>QR Code Recognition</string>
 				<key>type</key>
 				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E91C78B7-01C8-4453-AA0C-247528948412</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>qrreco</string>
+				<key>subtext</key>
+				<string>select an area of the screen to recognize</string>
+				<key>text</key>
+				<string>QR Code Recognize</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>61B6BE01-D6EB-4E9D-B240-A143FE4CDBA5</string>
+			<string>18A2BE5F-B269-482B-A102-E4267BCA57B8</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -123,34 +180,78 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Content Copied!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>60BDC103-44CA-4088-8B69-DBC034A3FCCA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>18A2BE5F-B269-482B-A102-E4267BCA57B8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
 		<key>4F65424C-03A0-4E65-AE07-B32F99BB6616</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>640</integer>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
-		<key>61B6BE01-D6EB-4E9D-B240-A143FE4CDBA5</key>
+		<key>60BDC103-44CA-4088-8B69-DBC034A3FCCA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>130</integer>
+			<integer>640</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>200</integer>
+		</dict>
+		<key>62359D05-A6B0-4BC1-8751-416EABAD7909</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>80</integer>
 		</dict>
 		<key>E6D870FF-799D-4E4F-83AE-7A36FDBA2343</key>
 		<dict>
 			<key>xpos</key>
-			<integer>450</integer>
+			<integer>480</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>200</integer>
+		</dict>
+		<key>E91C78B7-01C8-4453-AA0C-247528948412</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>130</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.0.1</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>github.com/pandazki/alfred-qr-reco</string>
 </dict>
 </plist>

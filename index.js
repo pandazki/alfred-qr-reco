@@ -8,14 +8,13 @@ const zbar = 'zbarimg --raw -q temp_capture.png';
 const clean = 'rm temp_capture.png';
 
 exec(capture, function (error, stdout, stderr) {
-  if (!error && !stderr)
+  if (!error && !stderr) {
     exec(zbar + ' && ' + clean, function (error, stdout, stderr) {
       if (!error && !stderr) {
-        alfy.output([{
-          title: 'result',
-          subtitle: stdout.replace('\n', ''),
-          arg: stdout.replace('\n', '')
-        }]);
+        process
+          .stdout
+          .write(stdout.trim());
       }
     })
+  }
 });
