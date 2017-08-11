@@ -2,7 +2,7 @@
 
 > QR Code Recognition
 
-![screenshot](/qr_reco_screenshot.gif)
+![screenshot](https://raw.githubusercontent.com/pandazki/alfred-qr-reco/master/qr_reco_screenshot.gif)
 
 ## Install
 
