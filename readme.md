@@ -7,6 +7,9 @@
 ## Install
 
 ```
+$ brew install zbar
+```
+```
 $ npm install --global alfred-qr-reco
 ```
 
